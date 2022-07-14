@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=1">
+    <title>DontBlameMe</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../images/Icon.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/jpg" href="../images/Icon.jpg"/>
+</head>
+
+<body>
+
+    <h1 class="header">Welcome</h1>
+    <p class="multiline" id="mainText">
+I am DontBlameMe or <strong>Lukas</strong> a <strong>Here_Would_Be_My_Age_If_You_Had_JavaScript_Enabled years</strong> old developer from <strong>Germany</strong>
+
+The <strong>Open-Source</strong> projects I have created can be found on <a class="clickLink" href="https://github.com/DrachenfeuerHD" target="_blank">GitHub</a>
+
+If you have any <strong>questions</strong> feel free to <strong>contact</strong> me using <a class="clickLink" href="mailto:Contact@DontBlameMe.dev" target="_blank">E-Mail</a> or <a class="clickLink" href="https://discord.com/users/763014547568066570" target="_blank">Discord</a>
+
+My <strong>Skills</strong> are
+
+<a class="clickLink" href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java (9/10)</a>
+<a class="clickLink" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript (4/10)</a>
+<a class="clickLink" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML (6/10)</a>
+<a class="clickLink" href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS (5/10)</a>
+<a class="clickLink" href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C# (3/10)</a>
+<a class="clickLink" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python (4/10)</a>
+
+
+
+This is a simple website designed by <strong>DontBlameMe</strong>
+
+</p>
+    
+</body>
+
+<script>
+
+    var date = new Date();
+    var d2 = date.getDate();
+    var m2 = 1 + date.getMonth();
+    var y2 = date.getFullYear();
+    var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    if(16 > d2){
+        d2 = d2 + month[m2 - 1];
+        m2 = m2 - 1;
+    }
+    if(8 > m2){
+        m2 = m2 + 12;
+        y2 = y2 - 1;
+    }
+    var d = d2 - 16;
+    var m = m2 - 8;
+    var y = y2 - 2005;
+
+    document.getElementById("mainText").innerHTML = document.getElementById("mainText").innerHTML.replace("Here_Would_Be_My_Age_If_You_Had_JavaScript_Enabled", y);
+</script>
+
+</html>
